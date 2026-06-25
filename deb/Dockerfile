@@ -10,7 +10,6 @@ RUN apt-get update && apt-get install -y wget binutils
 RUN bash /install.sh
 
 FROM debian:sid-slim
-LABEL maintainer="Simon Felding <sife@adm.ku.dk>"
 
 EXPOSE 25/tcp
 EXPOSE 143/tcp

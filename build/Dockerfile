@@ -12,7 +12,6 @@ WORKDIR /build/
 RUN make build-nogui vault-editor
 
 FROM debian:sid-slim
-LABEL maintainer="Simon Felding <sife@adm.ku.dk>"
 
 EXPOSE 25/tcp
 EXPOSE 143/tcp
