@@ -13,9 +13,9 @@ on:
   workflow_dispatch:
 
 env:
-  GHCR_REPO: shenxn/protonmail-bridge-docker
-  DOCKERHUB_REPO: shenxn/protonmail-bridge
-  DOCKER_REPO_DEV: ghcr.io/shenxn/protonmail-bridge
+  GHCR_REPO: josh-software/protonmail-bridge-docker
+  DOCKERHUB_REPO: joshxsoftware/protonmail-bridge
+  DOCKER_REPO_DEV: ghcr.io/josh-software/protonmail-bridge
   PLATFORMS: linux/amd64,linux/arm64/v8,linux/arm/v7,linux/riscv64
 
 jobs:

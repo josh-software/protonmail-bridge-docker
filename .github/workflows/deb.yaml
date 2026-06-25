@@ -13,8 +13,8 @@ on:
   workflow_dispatch:
 
 env:
-  DOCKER_REPO: shenxn/protonmail-bridge
-  DOCKER_REPO_DEV: ghcr.io/shenxn/protonmail-bridge-dev
+  DOCKER_REPO: joshxsoftware/protonmail-bridge
+  DOCKER_REPO_DEV: ghcr.io/josh-software/protonmail-bridge-dev
 
 jobs:
   deb:

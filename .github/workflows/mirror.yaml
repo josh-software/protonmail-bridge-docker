@@ -23,5 +23,5 @@ jobs:
           echo "${SSH_KEY}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           export GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no -l git"
-          git remote add gitee git@gitee.com:shenxn/protonmail-bridge-docker.git
+          git remote add gitee git@gitee.com:josh-software/protonmail-bridge-docker.git
           git push --tags --force --prune gitee "refs/remotes/origin/*:refs/heads/*"
