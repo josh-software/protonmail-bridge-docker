@@ -21,10 +21,14 @@ env:
 jobs:
   test:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      security-events: write
     if: github.ref != 'refs/heads/master'
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v4
 
       - name: Set version
         id: version
@@ -71,12 +75,15 @@ jobs:
           output: 'trivy-results.sarif'
 
       - name: Upload Trivy scan SARIF report
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: 'trivy-results.sarif'
 
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     strategy:
       fail-fast: false
@@ -88,7 +95,7 @@ jobs:
           - linux/riscv64
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v4
 
       - name: Prepare
         run: |
@@ -162,6 +169,10 @@ jobs:
 
   merge:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      security-events: write
     needs:
       - build
     steps:
@@ -222,7 +233,7 @@ jobs:
           severity: 'CRITICAL,HIGH'
           output: 'trivy-results.sarif'
       - name: Upload Trivy scan SARIF report
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: 'trivy-results.sarif'
 

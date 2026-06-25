@@ -61,9 +61,9 @@ docker compose up -d
 
 ## Kubernetes
 
-If you want to run this image in a Kubernetes environment. You can use the [Helm](https://helm.sh/) chart (https://github.com/k8s-at-home/charts/tree/master/charts/stable/protonmail-bridge) created by [@Eagleman7](https://github.com/Eagleman7). More details can be found in [#23](https://github.com/josh-software/protonmail-bridge-docker/issues/23).
+If you want to run this image in a Kubernetes environment. You can use the [Helm](https://helm.sh/) chart (https://github.com/k8s-at-home/charts/tree/master/charts/stable/protonmail-bridge) created by [@Eagleman7](https://github.com/Eagleman7). More details can be found in issue #23.
 
-If you don't want to use Helm, you can also reference to the guide ([#6](https://github.com/josh-software/protonmail-bridge-docker/issues/6)) written by [@ghudgins](https://github.com/ghudgins).
+If you don't want to use Helm, you can also reference to the guide (#6) written by [@ghudgins](https://github.com/ghudgins).
 
 ## Security
 
